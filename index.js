@@ -42,10 +42,21 @@ function total() {
   return total
 }
 
-
 function removeFromCart(item) {
   // write your code here
+  var matchIndex = []
+  for (let i=0; i<cart.length; i++) {
+    if (cart[i].itemName === item) {
+      matchIndex.push(i)
+    }
+  }
+  if (matchIndex.length === 0) {
+    return 'That item is not in your cart.'
+  }
+  cart.split(matchIndex[0], 1)
+  return cart
 }
+
 
 function placeOrder(cardNumber) {
   // write your code here
