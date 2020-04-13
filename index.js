@@ -53,7 +53,7 @@ function removeFromCart(item) {
   if (matchIndex.length === 0) {
     return 'That item is not in your cart.'
   }
-  cart.split(matchIndex[0], 1)
+  cart.splice(matchIndex[0], 1)
   return cart
 }
 
